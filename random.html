@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+                <title>Random Word Generator</title>
+
+</head>
+
+<!-- Include the reference to jquery file as it is being used in ajax calls -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<!-- A script to produce the random word using the API suggested -->
+
+<script>
+
+                // A function which calls the api to get the random word
+
+                function generateRandomWord() {
+
+        var randomWordURL = "http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=5a81407b6bfb9ace9050c0f38f20015624af4ff24ad8bf521";
+
+       
+
+                                // ajax request using GET method which calls the displayRandomWord() function to display the random word as callback
+
+                                $.ajax({
+
+            type: "GET",
+
+            url: randomWordURL,
+
+            dataType: "jsonp",
+
+            jsonpCallback: 'displayRandomWord'
+
+        });
+
+    }
+
+                // A function to display the random word
+
+    function displayRandomWord(data) {
+
+        document.getElementById("randomword").innerHTML=data[0].word;
+
+    }
+
+               
+
+</script>
+
+<!-- Call the generateRandomWord() method when the webpage loads -->
+
+<body onload="generateRandomWord()">
+
+                <div id="randomword"></div>
+
+</body>
+
+</html>

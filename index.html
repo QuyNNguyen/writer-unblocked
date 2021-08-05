@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Colorful Revolution</title>
+  
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+     <link rel="stylesheet" href="css/style.css">
+     <link href="css/animate.css" rel="stylesheet">
+
+  
+</head>
+
+<body onload="generateRandomWord()">
+
+
+<!-- Random words  -->
+	<div class="space"></div>
+	<div>
+		<div class="half left">
+  			<h1 class="tlt randomWord" id= "randomword0"></h1>
+  		</div>
+
+  		<div class="half right">
+  			<h1 class="tlt randomWord" id= "randomword1"></h1>
+  		</div>
+  	</div>
+
+
+
+
+<!-- Text box -->
+  	<div class="space"></div>
+	<form class="cf" action="php/index.php">
+  		<div class="storybox">
+    		<textarea name="entry" type="text" id="input-message" placeholder="(Create your story using the above words in 800 characters)" required></textarea>
+  		</div>  
+  		<input type="submit" value="Submit" id="input-submit">
+	</form>
+	<div class="space"></div>
+	<div class="space"></div>
+
+
+
+<!-- Hidden gifs down below -->
+
+	<div>
+		<div class="half left">
+  			<img src="boyread.gif" alt="You found four words!">
+  		</div>
+
+  		<div class="half right">
+  			<img src="boyflower.gif" alt="You found four words!">
+  		</div>
+  	</div>	
+  
+  	
+
+<!-- Scripts -->
+  	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  	<script src='https://cdn.rawgit.com/jschr/textillate/master/assets/jquery.lettering.js'></script>
+  	<script src='https://cdn.rawgit.com/jschr/textillate/master/jquery.textillate.js'></script>
+  	<script  src="js/index.js"></script>
+
+
+
+</body>
+</html>
